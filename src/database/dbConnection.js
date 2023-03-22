@@ -1,0 +1,9 @@
+const mongoose= require('mongoose');
+
+exports.dbConnection = () => {
+    mongoose.connect(process.env.CONNECTION_STRING).then(() => {
+        console.log('db connection successfully');
+    }).catch((err) => {
+        console.log(err);
+    })
+}

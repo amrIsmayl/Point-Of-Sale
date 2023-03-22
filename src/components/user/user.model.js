@@ -5,7 +5,7 @@ const schema = Schema({
         type: String,
         required: [true, 'user name is required'],
         trim: true, // to remove all spaces between words
-        minlength: [4, 'too short user name'],
+        minlength: [3, 'too short user name']
     },
     lastName: {
         type: String,
@@ -49,13 +49,13 @@ const schema = Schema({
         default: true
     },
     wishlist: {
-        type: Object,
+        type: Object
     },
     addresses: [{
         name: String,
         street: String,
         city: String,
-        phone: String,
+        phone: String
     }]
 }, { timestamps: true }) // timestamps to create ( createdAt and updatedAt) by default
 
